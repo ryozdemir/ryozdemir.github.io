@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    margin: 0;
+    font-family:'Roboto', sans-serif ;
+    background-image: url('img/a-street-in-japan-wallpaper.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.music-container {
+    background-color:rgb(231, 53, 163);
+    opacity: 0.9;
+    border-radius: 25px;
+    display: flex;
+    padding: 20px 30px;
+    position: relative;
+    margin:100px 0px;
+    z-index: 10;
+}
+
+.img-container {
+    position: relative;
+    width: 110px;
+}
+
+
+
+.img-container img {
+    width: inherit;
+    height: 110px;
+    border-radius: 50%;
+    object-fit: cover;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.navigation {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+}
+
+.action-btn {
+    background-color: rgb(88, 0, 105);
+    border: 0;
+    color:rgb(217, 238, 98);
+    font-size: 10px;
+    cursor: pointer;
+    padding: 10px;
+    margin: 0 20px;
+    border-radius: 25%;
+    
+}
+
+.action-btn-big {
+    color:rgb(217, 238, 98);
+    font-size: 15px;
+    background-color: rgb(88, 0, 105);
+}
+
+.action-btn:focus {
+    outline: 0;
+}
+
+.music-info {
+    background-color:rgb(231, 53, 163);
+    border-radius: 15px 15px 0 0;
+    position: absolute;
+    top:0;
+    left: 20px;
+    width: calc(100% - 40px);
+    transform: translateY(0%);
+    opacity: 0;
+    padding:10px 10px 10px 150px ;
+    transition:transform 0.3s ease-in, opacity 0.3s ease-in ;
+    
+}
+
+.music-info h4 {
+    margin:0;
+    color:#fff;
+}
+
+.music-container.play .music-info { 
+    opacity:0.8;
+    transform: translateY(-100%);
+    color: #fff;
+    text-align: center;
+}
+
+
+.progress-container {
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 10px 0;
+    height: 4px;
+    width: 100%;
+}
+
+.progress {
+    background-color: rgb(241, 218, 7);
+    border-radius: 5px;
+    height: 100%;
+    width: 0%;
+    transition: width 0.1s linear ;
+    color: #fff;
+}
+
+.footer {
+    background-color:rgb(231, 53, 163) ;
+    color: rgb(241, 218, 7);
+    width: 30%;
+    height: 70px;
+    border-radius: 25px;
+    text-align: center;
+    padding-top:15px;
+    opacity: 0.9;
+}
+
+*:fullscreen
+*:-ms-fullscreen,
+*:-webkit-full-screen,
+*:-moz-full-screen {
+   overflow: auto !important;
+}
